@@ -10,8 +10,8 @@ Run The Server: **npm run dev **
 
 
 **Note**
-If you face issue to install node module try these command I mention below 
-npm install --legacy-peer-deps
+If you face issue to install node module try these command I mention Here : 
+npm install --legacy-peer-deps    OR 
 npm install --force 
 
 Currently, two official plugins are available:
