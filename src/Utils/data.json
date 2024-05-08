@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Article 1",
+    "upvotes": 10,
+    "date": "2022-04-20"
+  },
+  {
+    "title": "Article 2",
+    "upvotes": 5,
+    "date": "2022-04-15"
+  },
+  {
+    "title": "Article 3",
+    "upvotes": 15,
+    "date": "2022-04-25"
+  }
+]
