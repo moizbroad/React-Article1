@@ -2,7 +2,7 @@
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Just Clone the project using   **git Clone "<Link>"**
+Just Clone the project using   **git clone "<Link>"**
 
 Install Node modules **using  npm i** 
 
