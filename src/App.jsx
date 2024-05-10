@@ -1,6 +1,6 @@
 import "./App.css";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
-import Articles from "./Pages/Articles";
+import Articles from "./pages/Articles";
 
 function App() {
   return (

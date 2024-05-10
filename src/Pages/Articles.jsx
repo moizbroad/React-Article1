@@ -1,42 +1,19 @@
-import React, { useState } from "react";
-import Button from "../Common/Button";
+import React, { useEffect, useState } from "react";
+import Button from "../common/Button";
+import data from "../utils/data.json";
+import logo from "../assets/logo.png";
+import ArticleDetails from "../components/ArticleDetails";
 
 const Articles = () => {
-  const initialArticles = [
-    {
-      title: "Article 1",
-      upvotes: 10,
-      date: "2019-01-21",
-    },
-    {
-      title: "Article 2",
-      upvotes: 5,
-      date: "2019-10-21",
-    },
-    {
-      title: "Article 3",
-      upvotes: 15,
-      date: "2010-12-31",
-    },
-    {
-      title: "Article 4",
-      upvotes: 3,
-      date: "2019-11-22",
-    },
-    {
-      title: "Article 5",
-      upvotes: 1,
-      date: "2022-04-25",
-    },
-  ];
+  const [articles, setArticles] = useState(data);
 
-  const [articles, setArticles] = useState(initialArticles);
-
+  // sort by numbers
   const sortByUpvotes = () => {
     const sortedArticles = [...articles].sort((a, b) => b.upvotes - a.upvotes);
     setArticles(sortedArticles);
   };
 
+  //  sort by dates
   const sortByDate = () => {
     const sortedArticles = [...articles].sort(
       (a, b) => new Date(b.date) - new Date(a.date)
@@ -44,16 +21,14 @@ const Articles = () => {
     setArticles(sortedArticles);
   };
 
-  useState(() => {
-    sortByUpvotes();
-  }, []);
-
   return (
     <>
       <section>
-        <div className="text-4xl text-center font-bold">Sorting Articles</div>
+        <div className=" flex justify-center items-center gap-x-12 text-4xl text-center font-bold">
+          Sorting Articles <img src={logo} />{" "}
+        </div>
 
-        <div className="grid grid-cols-12 gap-4 pt-24 ">
+        <div className="grid grid-cols-12 gap-4 mt-24 ">
           <div className="col-span-4  bg-black text-center p-4 xs:text-sm xs:px-0  font-semibold text-white">
             Titles
           </div>
@@ -64,21 +39,8 @@ const Articles = () => {
             Most Recent
           </div>
         </div>
-        {articles.map((item, index) => {
-          return (
-            <div key={index} className="grid grid-cols-12 gap-4 pt-24 ">
-              <div className="col-span-4  bg-gray-200 text-center p-4 xs:text-sm xs:px-0 text-red-700">
-                {item.title}
-              </div>
-              <div className="col-span-4 bg-gray-200 text-center p-4 xs:text-sm xs:px-0 text-yellow-500">
-                {item.upvotes}
-              </div>
-              <div className="col-span-4 bg-gray-200 text-center p-4 xs:text-sm xs:px-0  text-green-700">
-                {item.date}
-              </div>
-            </div>
-          );
-        })}
+
+        <ArticleDetails article={articles} />
 
         <div className="mt-20 flex justify-center items-center gap-x-[30px]">
           <div className="font-medium"> Sort By </div>

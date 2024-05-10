@@ -2,16 +2,26 @@
   {
     "title": "Article 1",
     "upvotes": 10,
-    "date": "2022-04-20"
+    "date": "2019-01-21"
   },
   {
     "title": "Article 2",
     "upvotes": 5,
-    "date": "2022-04-15"
+    "date": "2019-10-21"
   },
   {
     "title": "Article 3",
     "upvotes": 15,
+    "date": "2010-12-31"
+  },
+  {
+    "title": "Article 4",
+    "upvotes": 3,
+    "date": "2019-11-22"
+  },
+  {
+    "title": "Article 5",
+    "upvotes": 1,
     "date": "2022-04-25"
   }
 ]

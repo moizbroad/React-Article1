@@ -6,7 +6,6 @@ const Button = ({
   disabled,
   paddingX = "16",
   paddingY = "4",
-
   breakpoint,
   widthfull,
   fontbold,
@@ -38,6 +37,4 @@ const Button = ({
   );
 };
 
-// breakpoint = "sm:w-[180px] md:w-[190px] lg:w-[350px] xl:w-[460px]";
-//
 export default Button;
