@@ -8,6 +8,8 @@ Install Node modules **using  npm i**
 
 Run The Server: **npm run dev **
 
+Server will run on http://localhost:5174/
+
 
 **Note**
 If you face issue to install node module try these command I mention Here : 
