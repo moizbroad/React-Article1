@@ -4,12 +4,10 @@ const Message = () => {
   const [showPopup, setShowPopup] = useState(true);
 
   useEffect(() => {
-    // Set showPopup to false after 3 seconds
     const timeout = setTimeout(() => {
       setShowPopup(false);
     }, 1000);
 
-    // Clean up the timeout when the component unmounts
     return () => clearTimeout(timeout);
   }, []);
 

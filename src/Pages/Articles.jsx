@@ -7,13 +7,11 @@ import ArticleDetails from "../components/ArticleDetails";
 const Articles = () => {
   const [articles, setArticles] = useState(data);
 
-  // sort by numbers
   const sortByUpvotes = () => {
     const sortedArticles = [...articles].sort((a, b) => b.upvotes - a.upvotes);
     setArticles(sortedArticles);
   };
 
-  //  sort by dates
   const sortByDate = () => {
     const sortedArticles = [...articles].sort(
       (a, b) => new Date(b.date) - new Date(a.date)
